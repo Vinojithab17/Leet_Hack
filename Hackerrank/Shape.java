@@ -5,6 +5,11 @@ class Shape {
     int width;
     int i = 023;
 
+    public void Greet() {
+        System.out.println("Hello from Parent");
+    }
+
+
     public Shape(int length, int width) {
         this.length = length;
         this.width = width;
@@ -18,6 +23,10 @@ class Shape {
 
 
 class Rectangle extends Shape {
+    @Override
+    public void Greet() {
+        System.out.println("Hello from Child");
+    }
 
     public Rectangle(int length, int width) {
         super(length, width);
