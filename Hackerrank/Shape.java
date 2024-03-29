@@ -15,6 +15,10 @@ class Shape {
         this.width = width;
     }
 
+    private void area(int a) {
+        System.out.println("Area of Shape");
+    }
+
     public void area() {
         String s=String.format("%d %d",this.length, this.width); 
         System.out.println(s);

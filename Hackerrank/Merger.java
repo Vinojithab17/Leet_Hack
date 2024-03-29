@@ -12,7 +12,7 @@ public class Merger {
            int  j = i;
            b[i] =  a[i-6];
            int temp;
-            while(b[j]<b[j-1]){
+            if(b[j]<b[j-1]){
                 temp = b[j-1];  
                 b[j-1] = b[j];  
                 b[j] = temp;  
