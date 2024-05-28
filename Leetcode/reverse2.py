@@ -1,10 +1,11 @@
-a = 1234
-b = 0 
-
-print(b)
-
-while a > 0:
-    b = a%10 + b*10
-    a = a//10
-
-print(b)
+x = -1234
+b = 0
+c = abs(x)
+if x < 0:
+    a = -1
+else : 
+    a =1
+while c > 0:
+    b = b*10 + c%10
+    c = c//10
+print(b*a)
