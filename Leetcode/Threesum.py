@@ -1,6 +1,7 @@
 print("Hello World")
 
 nums = [-1,0,1,2,-1,-4]
+nums = [0,0,0]
 
 
 
