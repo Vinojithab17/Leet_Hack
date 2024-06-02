@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -25,7 +24,7 @@ class Dog extends Animal{
     }
 }
 public class Casting {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
 
         List<Animal> animals = new ArrayList<Animal>();
         Animal a = new Dog();   
