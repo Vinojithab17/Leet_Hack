@@ -10,7 +10,7 @@ class Solution:
         print(count)
 
 sol = Solution()
-sol.titleToNumber('ZY')
+sol.titleToNumber('AZYC')
         
 
 print(ord('A'))
