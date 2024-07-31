@@ -1,26 +1,29 @@
 const {Client} = require('pg');
-const client  = new Client({
-    host:"localhost",
-    user :"postgres",
-    port :"5432",
-    database : "test"
-})
 
-client.connect();
+const DBClient  = new Client({
+    host:process.env.DB_HOST,
+    user :process.env.DB_USER,
+    port :process.env.DB_PORT,
+    database : process.env.DB_NAME,
+});
 
-client.query(
 
-    `SELECT * FROM person`, (err,res)=>{
-        if(!err){
-            console.log(res.rows);
-        }else{
-            console.log(err.message);
-        }
-        client.end;
-    }
-)
+DBClient.connect()
+  .then(() => console.log('Connected to PostgreSQL'))
+  .catch(err => console.error('Connection error', err.stack));
 
-// CREATE TABLE person(Id INT, Name VARCHAR(50), Age INT, City VARCHAR(50));
-// INSERT INTO person VALUES(1, 'John', 25, 'New York');
-// INSERT INTO person VALUES(2, 'Johnny', 27, 'Clarksville');
+//   DBClient.query(
+
+//     `SELECT * FROM person`, (err,res)=>{
+//         if(!err){
+//             console.log(res.rows);
+//         }else{
+//             console.log(err.message);
+//         }
+//         DBClient.end;
+//     }
+// )
+
+
+module.exports = {DBClient};
 
